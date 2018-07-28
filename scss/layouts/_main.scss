@@ -1,0 +1,76 @@
+main{
+    max-width: $max-width;
+    margin:0 auto;
+    .work-experience{
+       
+        margin-top: 15px;
+        .title{
+            @include title();
+            @include flexbox(row,center,center);
+            width: 100%;
+            padding-top:0px;
+            @include font-family(900);
+            p{
+                margin:20px;
+            }
+        }
+        .experiences{
+            .shadow-experience{
+                -webkit-box-shadow: 0px 1px 59px 0px rgba(130,118,130,1);
+                -moz-box-shadow: 0px 1px 59px 0px rgba(130,118,130,1);
+                box-shadow: 0px 1px 59px 0px rgba(130,118,130,1);
+            }
+
+            @include flexbox(row,center,center);
+            .experience{
+                @include flexbox(column,center,center);
+                
+                .company{
+                    @include flexbox(row,center,center);
+                    .image{
+                        width:150px;
+                        height:150px;
+                        img{
+                            height:auto;
+                            max-width: 100%;
+                            display:block;
+                        }
+                    }
+                }
+                .body-experience{
+                    @include flexbox(column,center,flex-start);
+                    padding-left: 20px;
+                    .title{
+                        @include flexbox(column,center,flex-start);
+                        font-size:20px;
+                        color:$subtitle;
+                        text-align: left;
+                        color:#000;
+                        padding:0px;
+                        font-size:16px;
+                        p{
+                            margin:0;
+                            font-size:20px;
+                            color:$subtitle;  
+                            @include font-family(900);  
+                        }
+                        
+                    }
+                    .dates{
+                        color:#000;
+                        font-size:16px;
+                        padding:0px;
+                    
+                    }
+                    p{
+                        margin:0px;
+                        margin:0;
+                        font-size:16px;
+                        @include font-family(400);
+                        padding: 10px 0px;
+                    }
+                }
+            }
+        }
+    }
+}

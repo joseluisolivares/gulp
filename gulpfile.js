@@ -37,9 +37,9 @@ gulp.task ('css', function(){
 
 /* OPTIMIZAR IMAGENES, NO LA AÑADO EN LA TAREA DEFAULT PORQUE CONSUME MUCHOS RECURSOS, LA ETNGO QUE LLAMAR POR SEPARADO CUANDO QUIERA HACER UNA OPTIMIZACIÓN DE IMÁGENES.*/ 
   gulp.task('imagenes', function(){
-    gulp.src('app/img/*') //Ruta de donde estan nuestas imágenes a optimizar
+    gulp.src('app/images/*') //Ruta de donde estan nuestas imágenes a optimizar
         .pipe(imagemin())
-        .pipe(gulp.dest('app/img'))  //Es donde le digo que me deje el archivo optimizado
+        .pipe(gulp.dest('app/images'))  //Es donde le digo que me deje el archivo optimizado
     }    
 );
 /*MINIFICAR HTML*/

@@ -1,0 +1,72 @@
+body,html{
+    margin: 0; padding: 0;
+}
+header{
+    @include flexbox(row,space-between,center);
+    @include font-family(400);
+    max-width: $max-width;
+    background-color: $background;
+    margin:0 auto;
+    background-color: $background-header;
+    .name{
+        @include flexbox(column,none,flex-start);
+        padding:10px 20px;
+        p{
+            text-transform: uppercase;
+            margin:0;
+            @include font-family(900);
+        }
+        p:nth-child(1){
+            font-size:30px;
+            color:$name;
+        }
+        p:nth-child(2){
+            font-size:30px;
+            color:$title;
+        }
+        p:nth-child(3){
+            color:$developer;
+            font-size: 12px;
+        }
+
+    }
+    .contact{
+        @include flexbox(row,center,center);
+        padding:10px 20px;
+        .image{
+            width: 100px;
+            height:100px; 
+            margin-right: 15px;
+            img{
+                display:block;
+                height:auto;
+                max-width: 100%;
+                border-radius: 50%;
+            }           
+        }
+        .data{
+            @include flexbox(column,center,flex-start);
+            .datum{
+                @include flexbox(row,center,center);
+                padding-bottom: 10px;
+                .icon{
+                    width: 20px;
+                    height:20px;
+                    padding-right: 10px;
+                    img{
+                        height:auto;
+                        max-width: 100%;
+                        display: block;
+                    }
+                }
+                p{
+                    margin:0;
+                    text-decoration: none;
+                }
+                p:nth-child(1){
+                    margin-top: -4px;
+                }
+            }
+        }
+    }
+}
